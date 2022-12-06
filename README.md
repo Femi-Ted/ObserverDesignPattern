@@ -1,6 +1,6 @@
 # Observer Design Pattern
 
-#Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.
+#Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.#
 As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  
 
 The Canvas Dashboard is the frontend access that connects us to the courses we subscribe to during any given semester; and although we are expected to register for at least one course or at most three courses per semester, we most likely don’t stay conscious that there are at least “318 undergraduate majors, 444 graduate programs, and 36 PhD disciplines” [2] most likely also being managed through Canvas, and likely subscribed to by over 27,000 students located at the different global campuses of the university.
