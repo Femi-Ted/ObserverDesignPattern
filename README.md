@@ -37,11 +37,17 @@ public class CourseInformation implements Subject {
   private String professorName;
   private int assignmentNumber;
   private int weekNumber;
-}
+ }
 
 In addition, there is a list to hold observers. Except for those three override methods, there are 5 methods. 
 The connection between some of them is that we use setInformation method to change information of course, and then the informationChanged method will be called, then the notifyObservers method will be called. In the notifyObservers method, we us¬¬e the update method to pass updated information of course to all its observers.
-public void notifyObservers() {
+  public void registerObserver(Observer o) {
+    observers.add(o);
+  }
+  public void removeObserver(Observer o) {
+    observers.remove(o);
+  }
+  public void notifyObservers() {
     for (Observer observer : observers) {
       observer.update(professorName, assignmentNumber, weekNumber);
     }
@@ -73,7 +79,7 @@ public class GeneralStudent implements Observer, DisplayElement{
   private int assignmentNumber;
   private int weekNumber;
   private CourseInformation courseInformation;
-}
+ }
 
 Here we only have two simple methods in this class. One of them is updated, which is used to update its field. At the end of this method, we call display method, so we can know immediately that the student is notified when the course information change.
 public void update(String professorName, int assignmentNumber, int weekNumber) {
@@ -82,16 +88,16 @@ public void update(String professorName, int assignmentNumber, int weekNumber) {
     this.weekNumber = weekNumber;
     display();
   }
-  public void display() {
+ public void display() {
     System.out.println("Inform the general student of updates\n" +
         "professorName " + professorName + "\n" +
         "assignmentNumber " + assignmentNumber + "\n" +
         "weekNumber " + weekNumber + "\n");
   }
-
+ 
 # CourseCenter Class
 Finally, we have the CourseCenter class, which is the driver class. In this class, we create an object of CourseInformation class, named courseInformation.
-We also create three different kinds of student objects, named general student, auditor, and teaching assistant. Then we change the course information twice to see what will happen. Then we remove auditors from the observer list and change the course information again to see what will happen next.
+We also create three different kinds of student objects, named general student, auditor, and teaching assistant. Then we change the course information twice to see what will happen. Then we remove auditors from the observer list and change the course information again to see what will happen.
 public class CourseCenter {
   public static void main(String[] args) {
     CourseInformation courseInformation = new CourseInformation();
@@ -114,4 +120,3 @@ public class CourseCenter {
 }
 
 So now we solve the problem. Thanks to the Observer Pattern.
-![image](https://user-images.githubusercontent.com/113145079/205814866-42e8bf3d-7a37-4b99-b798-4130a25f12d0.png)
