@@ -13,6 +13,7 @@ The problem is that there are different kinds of students enrolled in one course
 
 # Design Diagram
 Here is our design diagram.
+<img width="1037" alt="Screen Shot 2022-12-05 at 7 56 00 PM" src="https://user-images.githubusercontent.com/113145079/205822354-c3499222-9c6f-4978-978b-4f54ec462008.png">
  
 There are many ways to implement the Observer pattern but most of them include Subject and Observer interface. So here we also use these two interfaces. 
 
