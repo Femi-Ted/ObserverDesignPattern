@@ -1,6 +1,6 @@
 # Observer Design Pattern
 
-#Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.
+# Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.
 
 As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  
 
@@ -10,7 +10,7 @@ So, the question begs… How do we get information only about the courses we reg
 
 ![Screenshot 2022-12-06 at 08 01 28](https://user-images.githubusercontent.com/46625599/205961668-34c43970-ae61-4c50-8de7-2e7cd9e8df9f.png)
 
-#Jordan, Yuki, Courses, and the Observer Design Pattern on Canvas.
+# Jordan, Yuki, Courses, and the Observer Design Pattern on Canvas.
 
 For example, Jordan is registered for CS5004 and CS5800 this semester, while Yuki is registered for CS5004 and CS5008. But Jordan does not have access to CS5008 contents, neither does Yuki have access to CS5800 contents.  And I am sure neither of them get course related notifications on these courses.  
 
@@ -23,31 +23,31 @@ However, there are also those information which are peculiar to each student bas
 ![Screenshot 2022-12-06 at 08 05 56](https://user-images.githubusercontent.com/46625599/205962512-abcc104f-a171-4bcb-981e-06ed2d542936.png)
 
 
-#Information Dissemination in Software Design.
+# Information Dissemination in Software Design.
 
 What I just described is not peculiar to Jordan and Yuki alone as over 27,000 students in Northeastern University depends on receiving general and specific information updates from Canvas based on their interactions with their respective campuses, programs of study, and courses.
 
 The way these information are disseminated to each student while ensuring that they each receive only those updates relevant to them is what makes the Observer Design Pattern invaluable in object-oriented design and programming.
 
 
-#The Observer Design Pattern: Subjects and Observers.
+# The Observer Design Pattern: Subjects and Observers.
 
 In Object-Oriented Design, the Observer Design Pattern is a behavioral design pattern that “defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically” [3].  From our example of how Course updates are managed on Canvas, and from this definition, we can agree that our objects whose state we expect to change and being watched are the very courses we subscribe to, while Jordan and Yuki – the entire student body, instructors, and even application processes, - are the dependents.
 
 ![Screenshot 2022-12-06 at 08 12 51](https://user-images.githubusercontent.com/46625599/205964117-cc7dfa22-becf-4eaf-9dc0-40914698d05b.png)
 
-#Notable Applications of the Observer Design Pattern.
+# Notable Applications of the Observer Design Pattern.
 
 So, where else would we find Observer Design Pattern implementations?  They are prominent on social media platforms and manifests as status or activity updates on those we follow. The same applies when we subscribe to video contents on video sharing or video-on-demand platforms.  In fact, even when we download apps, the updates and notifications you receive are managed using the Observer Design Pattern!  
 
 Interestingly, the Observer Design Pattern is also central to Java.
 
 
-#Java Implementation of the Observer Design Pattern.
+# Java Implementation of the Observer Design Pattern.
 
 Until Java 9, it used to be implemented through the Observer and Observable Interfaces, while still prominent in all GUI implementations in the MVC Design Pattern… specifically, in the java.util.EventListener in Swing, where button clicks activates listeners to perform certain actions dependent on the update received from the Model [6].  Other implementations of the observer pattern in core Java are listed.
 
-#The Observer Design Pattern and Information Dissemination
+# The Observer Design Pattern and Information Dissemination
 
 Now, let’s explore the many ways we can implement the Observer Pattern by leveraging on the many relationships we can establish between the Subject and the Observer or Observers.  For this presentation, we will be borrowing terms from network communications, so we can explain the level of dependency that can exist between the Subject and the Observer or Observers. 
 1.	A unicast – where one Subject and One Observer relationship or dependency exist and information moves from that one subject to only one recipient or observer [1], either as a push or pull implementation. 
@@ -71,7 +71,7 @@ By Pull implementation - a situation where the Observer plays a more active role
 By push implementation – where the Subject plays a dominant role and automatically pushes updates to the Observer once they are available.  Unfortunately, in this implementation, the Subject can send detailed information to the Observer (even though it may not be needed). This can result in sluggish response times when a large amount of data is sent by the Subject but is never actually used by the Observer.  The only way to prevent this is to ensure that only the required data is sent from the Subject to the Observer at managed intervals.
 
 
-#The SOLID principles and The Observer Design Pattern
+# The SOLID principles and The Observer Design Pattern
 
 ![Screenshot 2022-12-06 at 08 19 24](https://user-images.githubusercontent.com/46625599/205965749-4acd41cd-8574-4dcf-ac76-3342e74481867.png)
 
@@ -81,7 +81,7 @@ Yes, of the five SOLID principles, the Observer Design Pattern checks to conform
 •	Dependency Inversion Principle: the Observer Design Pattern follows this principle since our classes depends on interfaces or abstract classes instead of concreate classes and methods.
 
 
-#What The Observer Design Pattern is Not!
+# What The Observer Design Pattern is Not!
 
 ![Screenshot 2022-12-06 at 08 21 05](https://user-images.githubusercontent.com/46625599/205966009-fe33b749-837f-4014-a096-0d36b0794c22.png)
 
@@ -90,7 +90,7 @@ We’ve reviewed what the Observer Pattern is in operation.  But what is the Obs
 Finally, any update dissemination implementation that does not incorporate loose coupling between Subject and Observer, while Subject maintains a list of its dependent cannot be classed as implementing Observer Design Pattern.
 
 
-#So, why should we use the Observer Design Pattern?
+# So, why should we use the Observer Design Pattern?
 
 1.	Subjects or Observers are not tied up and can be used independently of each other. So, the Observer can be reused anywhere else, if needed. [8]
 2.	All the Observers to be notified by the subject in a single event call [9].
@@ -105,7 +105,7 @@ Limitations of the Observer Design Pattern
 
 
 
-#So how do we implement the Observer Design Pattern
+# So how do we implement the Observer Design Pattern
 
 To Implement the Observer Design Pattern, we must have a Subject Interface or Abstrast Subject that contains methods for attaching, detaching, and notifying Observers, and an Observer Interface which contain an update method which will be called by the Subject Implementation and must be loosely coupled.  In an effective implementation the following structures should hold true:
 •	The Subject – should be implemented as an interface or abstract class and the only thing that the Subject should know about an Observer is that it implements a certain interface. It need not know the ConcreteObserver class. [8]
