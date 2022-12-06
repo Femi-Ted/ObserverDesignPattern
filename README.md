@@ -41,6 +41,7 @@ public class CourseInformation implements Subject {
 
 In addition, there is a list to hold observers. Except for those three override methods, there are 5 methods. 
 The connection between some of them is that we use setInformation method to change information of course, and then the informationChanged method will be called, then the notifyObservers method will be called. In the notifyObservers method, we us¬¬e the update method to pass updated information of course to all its observers.
+  ```
   public void registerObserver(Observer o) {
     observers.add(o);
   }
@@ -61,7 +62,7 @@ The connection between some of them is that we use setInformation method to chan
     this.weekNumber = weekNumber;
     informationChanged();
   }
-
+  ```
 # Observer Interface
 Then we talk about Observer interface, there is only one method in this interface, and every class that implements this interface must implement this method. So, every observer class will have this method. As we mentioned before, this method is used to pass updated information of course to observers.
 public interface Observer {
@@ -74,14 +75,17 @@ To make this example as simple as possible, so that the Observer pattern can be 
  
 # GeneralStudent Class
 We choose the GeneralStudent class as the example. In this class, we have three fields related to the course, the professor name, the assignment number and the week number. In addition, we also include the courseInformation as one field, it is because that it may be used by this class, such as removing observers. 
+  ```
 public class GeneralStudent implements Observer, DisplayElement{
   private String professorName;
   private int assignmentNumber;
   private int weekNumber;
   private CourseInformation courseInformation;
  }
+  ```
 
 Here we only have two simple methods in this class. One of them is updated, which is used to update its field. At the end of this method, we call display method, so we can know immediately that the student is notified when the course information change.
+  ```
 public void update(String professorName, int assignmentNumber, int weekNumber) {
     this.professorName = professorName;
     this.assignmentNumber = assignmentNumber;
@@ -94,11 +98,13 @@ public void update(String professorName, int assignmentNumber, int weekNumber) {
         "assignmentNumber " + assignmentNumber + "\n" +
         "weekNumber " + weekNumber + "\n");
   }
+  ```
  
 # CourseCenter Class
 Finally, we have the CourseCenter class, which is the driver class. In this class, we create an object of CourseInformation class, named courseInformation.
 We also create three different kinds of student objects, named general student, auditor, and teaching assistant. Then we change the course information twice to see what will happen. Then we remove auditors from the observer list and change the course information again to see what will happen.
-public class CourseCenter {
+ ```
+ public class CourseCenter {
   public static void main(String[] args) {
     CourseInformation courseInformation = new CourseInformation();
 
@@ -118,5 +124,6 @@ public class CourseCenter {
     courseInformation.setInformation("Jim", 9, 5);
   }
 }
+  ```
 
 So now we solve the problem. Thanks to the Observer Pattern.
