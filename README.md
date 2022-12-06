@@ -90,6 +90,30 @@ We’ve reviewed what the Observer Pattern is in operation.  But what is the Obs
 Finally, any update dissemination implementation that does not incorporate loose coupling between Subject and Observer, while Subject maintains a list of its dependent cannot be classed as implementing Observer Design Pattern.
 
 
+#So, why should we use the Observer Design Pattern?
+
+1.	Subjects or Observers are not tied up and can be used independently of each other. So, the Observer can be reused anywhere else, if needed. [8]
+2.	All the Observers to be notified by the subject in a single event call [9].
+3.	Observers can be added or removed at any point in time [10], (even at runtime) 
+4.	“Changes in the Subject or Observer will not affect each other. As both are independent or loosely coupled, they are free to make their own changes “[8]. Hence, “the subject only knows the list of observers.  It doesn’t care about how they have their implementation. [9]
+
+Limitations of the Observer Design Pattern
+•	Memory management is an issue in the Observer design pattern because subject will hold all the reference of all the observers that are registered.  In a large scale implementation, this accumulates to a lot of memory [9].
+•	Subscribers are notified in random order.
+
+
+
+
+
+#So how do we implement the Observer Design Pattern
+
+To Implement the Observer Design Pattern, we must have a Subject Interface or Abstrast Subject that contains methods for attaching, detaching, and notifying Observers, and an Observer Interface which contain an update method which will be called by the Subject Implementation and must be loosely coupled.  In an effective implementation the following structures should hold true:
+•	The Subject – should be implemented as an interface or abstract class and the only thing that the Subject should know about an Observer is that it implements a certain interface. It need not know the ConcreteObserver class. [8]
+•	The Observer – should be implemented as an interface or abstract class and should define the operations to be used to notify this [8]
+•	The ConcreteObserver - Any new Observer can be added at any point in time (as we will see in the code example by Yuki). [8]
+•	The ConcreteSubject -  The Subject need not be modified at all to add any new Observer. It maintains the state of the object and when a change occurs, it notifies the attached Observers. [8]
+
+<img width="566" alt="Screenshot 2022-12-06 at 09 12 48" src="https://user-images.githubusercontent.com/46625599/205977872-8864e59f-cecb-4c41-85ec-9278c2dd4e7c.png">
 
 
 
