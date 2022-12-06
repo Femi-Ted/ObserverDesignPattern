@@ -1,6 +1,7 @@
 # Observer Design Pattern
 
-#Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.#
+#Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.
+
 As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  
 
 The Canvas Dashboard is the frontend access that connects us to the courses we subscribe to during any given semester; and although we are expected to register for at least one course or at most three courses per semester, we most likely don’t stay conscious that there are at least “318 undergraduate majors, 444 graduate programs, and 36 PhD disciplines” [2] most likely also being managed through Canvas, and likely subscribed to by over 27,000 students located at the different global campuses of the university.
@@ -10,6 +11,7 @@ So, the question begs… How do we get information only about the courses we reg
 ![Screenshot 2022-12-06 at 08 01 28](https://user-images.githubusercontent.com/46625599/205961668-34c43970-ae61-4c50-8de7-2e7cd9e8df9f.png)
 
 #Jordan, Yuki, Courses, and the Observer Design Pattern on Canvas.
+
 For example, Jordan is registered for CS5004 and CS5800 this semester, while Yuki is registered for CS5004 and CS5008. But Jordan does not have access to CS5008 contents, neither does Yuki have access to CS5800 contents.  And I am sure neither of them get course related notifications on these courses.  
 
 Why? Because Canvas only updates students with their course specific information.  So, if we are to check Jordan and Yuki’s respective Canvas Dashboards, we are sure that we will only see information relevant to the courses they have each subscribed to.  On one part, there would exist  general information shared by both students on the same course, for example:
@@ -22,26 +24,31 @@ However, there are also those information which are peculiar to each student bas
 
 
 #Information Dissemination in Software Design.
+
 What I just described is not peculiar to Jordan and Yuki alone as over 27,000 students in Northeastern University depends on receiving general and specific information updates from Canvas based on their interactions with their respective campuses, programs of study, and courses.
 
 The way these information are disseminated to each student while ensuring that they each receive only those updates relevant to them is what makes the Observer Design Pattern invaluable in object-oriented design and programming.
 
 
 #The Observer Design Pattern: Subjects and Observers.
+
 In Object-Oriented Design, the Observer Design Pattern is a behavioral design pattern that “defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically” [3].  From our example of how Course updates are managed on Canvas, and from this definition, we can agree that our objects whose state we expect to change and being watched are the very courses we subscribe to, while Jordan and Yuki – the entire student body, instructors, and even application processes, - are the dependents.
 
 ![Screenshot 2022-12-06 at 08 12 51](https://user-images.githubusercontent.com/46625599/205964117-cc7dfa22-becf-4eaf-9dc0-40914698d05b.png)
 
 #Notable Applications of the Observer Design Pattern.
+
 So, where else would we find Observer Design Pattern implementations?  They are prominent on social media platforms and manifests as status or activity updates on those we follow. The same applies when we subscribe to video contents on video sharing or video-on-demand platforms.  In fact, even when we download apps, the updates and notifications you receive are managed using the Observer Design Pattern!  
 
 Interestingly, the Observer Design Pattern is also central to Java.
 
 
 #Java Implementation of the Observer Design Pattern.
+
 Until Java 9, it used to be implemented through the Observer and Observable Interfaces, while still prominent in all GUI implementations in the MVC Design Pattern… specifically, in the java.util.EventListener in Swing, where button clicks activates listeners to perform certain actions dependent on the update received from the Model [6].  Other implementations of the observer pattern in core Java are listed.
 
 #The Observer Design Pattern and Information Dissemination
+
 Now, let’s explore the many ways we can implement the Observer Pattern by leveraging on the many relationships we can establish between the Subject and the Observer or Observers.  For this presentation, we will be borrowing terms from network communications, so we can explain the level of dependency that can exist between the Subject and the Observer or Observers. 
 1.	A unicast – where one Subject and One Observer relationship or dependency exist and information moves from that one subject to only one recipient or observer [1], either as a push or pull implementation. 
 
@@ -65,6 +72,7 @@ By push implementation – where the Subject plays a dominant role and automatic
 
 
 #The SOLID principles and The Observer Design Pattern
+
 ![Screenshot 2022-12-06 at 08 19 24](https://user-images.githubusercontent.com/46625599/205965749-4acd41cd-8574-4dcf-ac76-3342e74481867.png)
 
 Yes, of the five SOLID principles, the Observer Design Pattern checks to conform with most prominently with three, and they are:
@@ -74,6 +82,7 @@ Yes, of the five SOLID principles, the Observer Design Pattern checks to conform
 
 
 #What The Observer Design Pattern is Not!
+
 ![Screenshot 2022-12-06 at 08 21 05](https://user-images.githubusercontent.com/46625599/205966009-fe33b749-837f-4014-a096-0d36b0794c22.png)
 
 We’ve reviewed what the Observer Pattern is in operation.  But what is the Observer Pattern not?  Although we mentioned that the Subject broadcasts to all registered Observer, please note that the Observer Pattern is not a true broadcast implementation in that all Observers can only access information or updates from the Subject only when they are on its list of registered or subscribed observers.   This is much different from a true broadcast that does not require a subscription model for update dissemination.
