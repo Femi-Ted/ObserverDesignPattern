@@ -19,26 +19,32 @@ There are many ways to implement the Observer pattern but most of them include S
 
 # DisplayElement interface
 In addition, we use the DisplayElement interface to make sure that every time students get updated course information, the message will be shown.
+  ```
 public interface DisplayElement {
   public void display();
 }
+  ```
 
 # Subject Interface
 In the Subject interface, there are three main methods to manage its observers, which are registerObserver, removeObserber, notifyObservers. 
+  ```
 public interface Subject {
   public void registerObserver(Observer o);
   public void removeObserver(Observer o);
   public void notifyObservers();
 }
+  ```
 
 # CourseInformation Class
 The class that implements the Subject class is CourseInformation. In this class, we have three fields related to the course, which are professor name, assignment number and week number. 
+  ```
 public class CourseInformation implements Subject {
   private List<Observer> observers;//used to hold observers
   private String professorName;
   private int assignmentNumber;
   private int weekNumber;
  }
+  ```
 
 In addition, there is a list to hold observers. Except for those three override methods, there are 5 methods. 
 The connection between some of them is that we use setInformation method to change information of course, and then the informationChanged method will be called, then the notifyObservers method will be called. In the notifyObservers method, we us¬¬e the update method to pass updated information of course to all its observers.
@@ -66,11 +72,11 @@ The connection between some of them is that we use setInformation method to chan
   ```
 # Observer Interface
 Then we talk about Observer interface, there is only one method in this interface, and every class that implements this interface must implement this method. So, every observer class will have this method. As we mentioned before, this method is used to pass updated information of course to observers.
+  ```
 public interface Observer {
   public void update(String professorName, int assignmentNumber, int weekNumber);
 }
-
-
+  ```
 Now let us go ahead with three concrete classes that implement the Observer interface, which represent three different kinds of students, general students, auditors and teaching assistants.
 To make this example as simple as possible, so that the Observer pattern can be understood by audiences easily, the content of these three classes is the same. So, we only explain one of them.
  
