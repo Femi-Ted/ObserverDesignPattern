@@ -1,6 +1,7 @@
 # Observer Design Pattern
 
-Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University![image](https://user-images.githubusercontent.com/46625599/205962002-a8ece90f-ba26-4803-96a5-23ad6ffe4567.png)
+**Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University.
+**
 
 As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  
 
@@ -10,8 +11,23 @@ So, the question begs… How do we get information only about the courses we reg
 
 ![Screenshot 2022-12-06 at 08 01 28](https://user-images.githubusercontent.com/46625599/205961668-34c43970-ae61-4c50-8de7-2e7cd9e8df9f.png)
 
+**Jordan, Yuki, Courses, and the Observer Design Pattern on Canvas.
+**
+For example, Jordan is registered for CS5004 and CS5800 this semester, while Yuki is registered for CS5004 and CS5008. But Jordan does not have access to CS5008 contents, neither does Yuki have access to CS5800 contents.  And I am sure neither of them get course related notifications on these courses.  
+
+Why? Because Canvas only updates students with their course specific information.  So, if we are to check Jordan and Yuki’s respective Canvas Dashboards, we are sure that we will only see information relevant to the courses they have each subscribed to.  On one part, there would exist  general information shared by both students on the same course, for example:
+•	General course information in the form of course syllabus, Instructor information etc.
+•	Course contents in the form of modules, assignments, labs, projects
+•	And more.
+However, there are also those information which are peculiar to each student based on their respective interactions with their courses on Canvas. For example: Task grades and grade point average updates.
+
+![Screenshot 2022-12-06 at 08 05 56](https://user-images.githubusercontent.com/46625599/205962512-abcc104f-a171-4bcb-981e-06ed2d542936.png)
 
 
+**Information Dissemination in Software Design.
+**
+
+What I just described is not peculiar to Jordan and Yuki alone as over 27,000 students in Northeastern University depends on receiving general and specific information updates from Canvas based on their interactions with their respective campuses, programs of study, and courses.
 
 
 # Course Example:
