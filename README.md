@@ -1,8 +1,15 @@
 # Observer Design Pattern
 
-Introduction: Courses and Students at Northeastern University.
+Introduction: the Observer Design Pattern, Courses, and Students at Northeastern University![image](https://user-images.githubusercontent.com/46625599/205962002-a8ece90f-ba26-4803-96a5-23ad6ffe4567.png)
 
-As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  The Canvas Dashboard is the frontend access that connects us to all the courses we register to during any given semester.
+As ALIGN graduate students at Northeastern University, I am sure we are all familiar with the Canvas Dashboard - our Learning Management System’s Dashboard.  
+
+The Canvas Dashboard is the frontend access that connects us to the courses we subscribe to during any given semester; and although we are expected to register for at least one course or at most three courses per semester, we most likely don’t stay conscious that there are at least “318 undergraduate majors, 444 graduate programs, and 36 PhD disciplines” [2] most likely also being managed through Canvas, and likely subscribed to by over 27,000 students located at the different global campuses of the university.
+
+So, the question begs… How do we get information only about the courses we register for and not bombarded by irrelevant notifications outside our choice of courses or program?  
+
+![Screenshot 2022-12-06 at 08 01 28](https://user-images.githubusercontent.com/46625599/205961668-34c43970-ae61-4c50-8de7-2e7cd9e8df9f.png)
+
 
 
 
