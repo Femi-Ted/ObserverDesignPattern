@@ -245,3 +245,32 @@ We also create three different kinds of student objects, named general student, 
   ```
 
 So now we solve the problem. Thanks to the Observer Pattern.
+
+
+
+
+
+# References:
+
+[1]	ESDS, “A Practical Guide to Differentiating Unicast, Broadcast & Multicast” [23 April, 2022]	https://www.esds.co.in/blog/difference-between-unicast-broadcast-and-multicast/#:~:text=Unicast%3A%20from%20one%20source%20to,traffic%20i.e.%20One%2Dto%2DMany. [Accessed Dec 1, 2022].
+
+[2]	https://studyabroad.shiksha.com/usa/universities/northeastern-university#:~:text=campus%20in%20Boston.-,Besides%20Boston%2C%20Northeastern%20University%20campuses%20are%20located%20in%20Charlotte%2C%20London,programs%2C%20and%2036%20PhD%20disciplines. [Accessed Dec 1, 2022].
+
+[3]	E. Freeman, E. Robson, “Keeping your Objects in the Know: the Observer Pattern”, Head First Design Patterns, 2nd Edition https://learning.oreilly.com/library/view/head-first-design/9781492077992/ch02.html#the_weather_monitoring_application_over
+O’Reilly Media, [Accessed Dec 1, 2022].
+
+[4]	Brijesh Saxena, DZone, “Observer Design Pattern In Java”, Oct. 12, 2020.  	https://dzone.com/articles/observer-design-pattern-in-java#:~:text=The%20Observer%20Design%20Pattern%20is,calling%20one%20of%20their%20methods. [Accessed Dec 1, 2022].
+
+[5] L. Gupta,  Behavioral Patterns, 	"HowToDoInJava “Observer Design Pattern “ 
+[August 23, 2021] https://howtodoinjava.com/design-patterns/behavioral/observer-design-pattern/ [Accessed Dec 1, 2022].
+
+[6].	Refactoring Guru, “Observer in Java”, https://refactoring.guru/design-patterns/observer/java/example [Accessed Dec 1, 2022].
+
+[7].	The Observer Pattern Methods - https://learning.oreilly.com/library/view/learning-python-design/9781785888038/ch06s04.html#ch06lvl2sec39 [Accessed Dec 1, 2022].
+
+[8]. Loose coupling and the Observer pattern, https://learning.oreilly.com/library/view/learning-python-design/9781785888038/ch06s05.html [Accessed Dec 1, 2022].
+
+[9] 	Javarevisited “Observer design patter in java with real world code Example”	https://javarevisited.blogspot.com/2011/12/observer-design-pattern-java-example.html#ixzz7mLZXRzNq [Accessed Dec 1, 2022].
+
+[10] https://learning.oreilly.com/library/view/learning-python-design/9781785888038/ch06s06.html, [Accessed Dec 1, 2022].
+
